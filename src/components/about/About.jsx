@@ -2,7 +2,7 @@ import React from 'react';
 import './about.css';
 import ME from '../../assets/about-me.png';
 import { FaAward } from 'react-icons/fa';
-import { FiUsers } from 'react-icons/fi';
+import { GiGraduateCap } from 'react-icons/gi';
 import { AiOutlineFolderOpen } from 'react-icons/ai';
 
 
@@ -22,14 +22,14 @@ const About = () => {
                 <div className='about__content'>
                     <div className='about__cards'>
                         <article className='about__card'>
+                            <GiGraduateCap className='about__icon' />
+                            <h5>Education</h5>
+                            <small>Master's Degree</small>
+                        </article>
+                        <article className='about__card'>
                             <FaAward className='about__icon' />
                             <h5>Experience</h5>
                             <small>1+ Year Working</small>
-                        </article>
-                        <article className='about__card'>
-                            <FiUsers className='about__icon' />
-                            <h5>Clients</h5>
-                            <small>Lorem ipsum dolor</small>
                         </article>
                         <article className='about__card'>
                             <AiOutlineFolderOpen className='about__icon' />
@@ -37,7 +37,9 @@ const About = () => {
                             <small>10+ Completed</small>
                         </article>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas id consequuntur voluptatibus fuga necessitatibus quisquam possimus ipsam est omnis, dignissimos officia commodi praesentium, quasi aperiam dolore ipsum soluta aliquam sapiente!</p>
+                    <p>Hello, my name is Agata and I am a Fullstack Developer based in Austin, Texas. Learning is my passion and I use it
+                        to expand my horizons in Software Engineering. I would be excited to help you build the next Big Thing! Don’t
+                        hesitate to contact me today! </p>
                     <a href="#contact" className='btn btn-primary'>Let's Talk</a>
                 </div>
             </div>

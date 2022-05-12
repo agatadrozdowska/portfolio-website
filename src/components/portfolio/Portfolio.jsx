@@ -1,59 +1,60 @@
 import React from 'react';
 import './portfolio.css';
-import IMG1 from '../../assets/portfolio1.jpg';
-import IMG2 from '../../assets/portfolio2.jpg';
+import IMG1 from '../../assets/portfolio1.png'
+import IMG2 from '../../assets/portfolio2.png';
 import IMG3 from '../../assets/portfolio3.jpg';
-import IMG4 from '../../assets/portfolio4.jpg';
-import IMG5 from '../../assets/portfolio5.png';
-import IMG6 from '../../assets/portfolio6.jpg';
+import DEMO1 from '../../assets/demo1.gif';
+import DEMO3 from '../../assets/demo3.gif';
+
 
 const data = [
     {
         id: 1,
         image: IMG1,
-        title: 'Placeholder for project name',
-        github: '',
-        demo: ''
+        title: 'Hogwartsy Retail Store',
+        github: 'https://github.com/Etsy-FEC',
+        demo: DEMO1
     },
     {
         id: 2,
         image: IMG2,
-        title: 'Placeholder for project name',
-        github: '',
+        title: 'Retail Store Data Migration',
+        github: 'https://github.com/SDC-Saskatchewanazon-TJTMAD',
         demo: ''
     },
     {
         id: 3,
         image: IMG3,
-        title: 'Placeholder for project name',
-        github: '',
-        demo: ''
+        title: 'Quality Of Life Comparator',
+        github: 'https://github.com/agatadrozdowska/MVP',
+        demo: DEMO3
     },
-    {
-        id: 4,
-        image: IMG4,
-        title: 'Placeholder for project name',
-        github: '',
-        demo: ''
-    },
-    {
-        id: 5,
-        image: IMG5,
-        title: 'Placeholder for project name',
-        github: '',
-        demo: ''
-    },
-    {
-        id: 6,
-        image: IMG6,
-        title: 'Placeholder for project name',
-        github: '',
-        demo: ''
-    }
+    // {
+    //     id: 4,
+    //     image: IMG4,
+    //     title: 'Placeholder for project name',
+    //     github: '',
+    //     demo: ''
+    // },
+    // {
+    //     id: 5,
+    //     image: IMG5,
+    //     title: 'Placeholder for project name',
+    //     github: '',
+    //     demo: ''
+    // },
+    // {
+    //     id: 6,
+    //     image: IMG6,
+    //     title: 'Placeholder for project name',
+    //     github: '',
+    //     demo: ''
+    // }
 ]
 
 
 const Portfolio = () => {
+
     return (
         <section id='portfolio'>
             <h5>My recent work</h5>
@@ -63,12 +64,12 @@ const Portfolio = () => {
                     return (
                         <article key={id} className='portfolio__item'>
                             <div className='portfolio__item-image'>
-                                <img src={image} alt="" />
+                                <img src={image} alt={title} />
                             </div>
                             <h3>{title}</h3>
                             <div className='portfolio__item-cta'>
                                 <a href={github} target="_blank" className='btn'>Github</a>
-                                <a href={demo} target="_blank" className='btn btn__primary'>Live Demo</a>
+                                <a href={demo} target="_blank" className={demo ? 'btn btn__primary' : 'btn__hidden'}>Live Demo</a>
                             </div>
                         </article>
                     )
